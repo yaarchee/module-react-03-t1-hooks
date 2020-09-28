@@ -1,0 +1,19 @@
+ul, p{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+input{
+    display: block;
+    outline: #4ec6ab;
+}
+.listItem{
+    display: flex;
+    justify-content: space-between;
+}
+.contactInfo{
+    margin-right: 10px;
+}
