@@ -13,6 +13,7 @@ export default  function  App() {
     const [filter, setFilter] = useState("");
 
 
+
     const addContacts  = (name, phone)=>{
         const newContact = {
             name,
@@ -21,9 +22,24 @@ export default  function  App() {
         }
 
 
-        setContacts(prevState => [...prevState, newContact])
-        console.log(contacts);
+        setContacts(prevState => [...prevState, newContact]);
+
+        console.log(contacts, "адд");
     }
+
+    useEffect(()=>{
+
+        const localContactsData =  JSON.parse(localStorage.getItem('contactsh'));
+        console.log(localContactsData, 'зашли')
+        localContactsData && setContacts(localContactsData);
+
+    },[])
+
+    useEffect(()=>{
+        localStorage.setItem('contactsh', JSON.stringify(contacts));
+
+    },[contacts])
+
 
     const removeContact = idx =>{
         setContacts(prevState => prevState.filter(contact => contact.id !== idx))

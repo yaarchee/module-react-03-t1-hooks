@@ -1,8 +1,8 @@
 {
-  "name": "module-react-02-t2",
+  "name": "module-react-03-t1-hooks",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yaarchee.github.io/module-react-02-t2",
+  "homepage": "https://yaarchee.github.io/module-react-03-t1-hooks",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
